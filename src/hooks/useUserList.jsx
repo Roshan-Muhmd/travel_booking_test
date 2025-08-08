@@ -15,9 +15,9 @@ useEffect(() => {
 }, [])
 
 const updateUserData = async(id,data) => {
-  debugger
+  
     const updateRes = await axiosInstance.patch( `/users/${id} `,data)
-    debugger
+    
     if(updateRes?.data){
         setUserList((prv)=>{
 
@@ -26,7 +26,7 @@ const updateUserData = async(id,data) => {
         if(itemindex >= 0){
          temp[itemindex] = updateRes?.data
         }
-debugger
+
         return temp
 
         })

@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { handleToggleBlock } from "../utils/propertyUtils";
 import Accordion from "../components/ui/Accordion";
+import Card from "../components/ui/Card";
 import FlightBookings from "../components/bookings/FlightBookings";
 import HotelBookings from "../components/bookings/HotelBookings";
+import useGetBookings from "../hooks/useGetBookings";
 
 const Bookings = () => {
   const [openBlocks, setOpenBlocks] = useState([]);
+
+  const {bookingData} = useGetBookings()
+  const flightBookings = bookingData?.flights
+  const hotelBookings = bookingData?.hotels
 
   return (
     <section className="w-4/5">
@@ -18,6 +24,15 @@ const Bookings = () => {
           collapseStatus={openBlocks.includes("flight")}
           handleCollapse={() => handleToggleBlock("flight", setOpenBlocks)}
         >
+          {flightBookings ?
+          flightBookings?.map((bookings)=>{
+            return (
+              <FlightBookings key={`flight_booking_data_${bookings?.id}`} bookings={bookings}/>
+            )
+          })
+          :
+          <Card>...Loading</Card>
+          }
          <FlightBookings/>
         </Accordion>
         <Accordion
@@ -27,7 +42,15 @@ const Bookings = () => {
           collapseStatus={openBlocks.includes("hotel")}
           handleCollapse={() => handleToggleBlock("hotel", setOpenBlocks)}
         >
-          <HotelBookings/>
+           {hotelBookings ?
+          hotelBookings?.map((bookings)=>{
+            return (
+              <HotelBookings key={`hotel_booking_data_${bookings?.id}`} bookings={bookings}/>
+            )
+          })
+          :
+          <Card>...Loading</Card>
+          }
         </Accordion>
       </ul>
     </section>

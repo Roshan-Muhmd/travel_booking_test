@@ -7,13 +7,16 @@ import Users from "./pages/Users";
 import NotFound from "./pages/NotFound";
 import Bookings from "./pages/Bookings";
 import Inventory from "./pages/Inventory";
+import LoginPage from "./pages/LoginPage";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
+import Logout from "./components/auth/Logout";
 
 function App() {
 
   const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />, // layout wrapper (optional)
+    element: <ProtectedRoute> <HomePage /> </ProtectedRoute>, // layout wrapper (optional)
     errorElement: <NotFound />, // fallback route,
     children: [
       {path: "",
@@ -33,6 +36,14 @@ function App() {
       }
     ]
   },
+  {
+    path: "/login",
+    element: <LoginPage/>
+  },
+  {
+    path: "/logout",
+    element: <Logout/>
+  }
 ]);
   
 

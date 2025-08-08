@@ -1,26 +1,15 @@
-import React, { useEffect ,useState} from "react";
-import { axiosInstance } from "../utils/commonUtils";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProperties } from "../redux/propertySlice";
 
 const useGetInventory = () => {
 
- const [inventoryData, setInventoryData] = useState({flight:[],hote:[]})
+ const inventoryData = useSelector(state => state?.property)
+ debugger
+ const dispatch = useDispatch()
 
   useEffect(() => {
-    (async () => {
-      const flightResponse = await axiosInstance.get("/flights");
-      try {
-        const [flightsRes, hotelsRes] = await Promise.all([
-          axiosInstance.get("/flights"),
-          axiosInstance.get("/flights")
-        ]);
-
-        setInventoryData({ flights: flightsRes?.data, hotels: hotelsRes?.data,  })
-
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-      debugger;
-    })();
+      dispatch(fetchProperties())
   }, []);
 
   return inventoryData;
