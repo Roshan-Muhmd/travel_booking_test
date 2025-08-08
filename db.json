@@ -1,0 +1,238 @@
+{
+  "flights": [
+    {
+      "id": "1",
+      "airline": "SkyAir",
+      "from": "JFK",
+      "to": "LAX",
+      "departure": "2025-08-10T09:00:00Z",
+      "arrival": "2025-08-10T12:00:00Z",
+      "price": 250
+    },
+    {
+      "id": "2",
+      "airline": "JetCloud",
+      "from": "LAX",
+      "to": "ORD",
+      "departure": "2025-08-11T14:30:00Z",
+      "arrival": "2025-08-11T18:00:00Z",
+      "price": 180
+    },
+    {
+      "id": "3",
+      "airline": "AeroLine",
+      "from": "ATL",
+      "to": "DFW",
+      "departure": "2025-08-12T08:15:00Z",
+      "arrival": "2025-08-12T10:45:00Z",
+      "price": 120
+    },
+    {
+      "id": "4",
+      "airline": "FlyHigh",
+      "from": "SFO",
+      "to": "SEA",
+      "departure": "2025-08-13T07:00:00Z",
+      "arrival": "2025-08-13T09:00:00Z",
+      "price": 95
+    },
+    {
+      "id": "5",
+      "airline": "BlueWings",
+      "from": "BOS",
+      "to": "MIA",
+      "departure": "2025-08-14T11:45:00Z",
+      "arrival": "2025-08-14T15:00:00Z",
+      "price": 210
+    },
+    {
+      "id": "6",
+      "airline": "EagleAir",
+      "from": "PHX",
+      "to": "DEN",
+      "departure": "2025-08-15T13:30:00Z",
+      "arrival": "2025-08-15T15:00:00Z",
+      "price": 130
+    },
+    {
+      "id": "7",
+      "airline": "CloudJet",
+      "from": "MSP",
+      "to": "DTW",
+      "departure": "2025-08-16T10:00:00Z",
+      "arrival": "2025-08-16T12:00:00Z",
+      "price": 105
+    },
+    {
+      "id": "8",
+      "airline": "SunFly",
+      "from": "IAH",
+      "to": "LAS",
+      "departure": "2025-08-17T16:30:00Z",
+      "arrival": "2025-08-17T18:30:00Z",
+      "price": 160
+    },
+    {
+      "id": "9",
+      "airline": "JetStream",
+      "from": "CLT",
+      "to": "TPA",
+      "departure": "2025-08-18T06:00:00Z",
+      "arrival": "2025-08-18T08:15:00Z",
+      "price": 140
+    },
+    {
+      "id": "10",
+      "airline": "NorthSky",
+      "from": "EWR",
+      "to": "BNA",
+      "departure": "2025-08-19T17:20:00Z",
+      "arrival": "2025-08-19T19:40:00Z",
+      "price": 170
+    }
+  ],
+  "hotels": [
+    {
+      "id": "1",
+      "hotelName": "Sunset Inn",
+      "address": "123 Ocean Drive, Miami, FL",
+      "availableRooms": 5,
+      "price": 150
+    },
+    {
+      "id": "2",
+      "hotelName": "Mountain View Lodge",
+      "address": "456 Alpine Road, Denver, CO",
+      "availableRooms": 8,
+      "price": 120
+    },
+    {
+      "id": "3",
+      "hotelName": "City Center Hotel",
+      "address": "789 Downtown Ave, New York, NY",
+      "availableRooms": 3,
+      "price": 220
+    },
+    {
+      "id": "4",
+      "hotelName": "Coastal Breeze Resort",
+      "address": "321 Beach Blvd, Santa Monica, CA",
+      "availableRooms": 10,
+      "price": 180
+    },
+    {
+      "id": "5",
+      "hotelName": "Lakeside Retreat",
+      "address": "654 Lakeview Rd, Minneapolis, MN",
+      "availableRooms": 6,
+      "price": 130
+    },
+    {
+      "id": "6",
+      "hotelName": "Skyline Suites",
+      "address": "987 Skyscraper Ln, Chicago, IL",
+      "availableRooms": 4,
+      "price": 200
+    },
+    {
+      "id": "7",
+      "hotelName": "Desert Bloom Inn",
+      "address": "159 Cactus Way, Phoenix, AZ",
+      "availableRooms": 7,
+      "price": 110
+    },
+    {
+      "id": "8",
+      "hotelName": "Harbor View Hotel",
+      "address": "753 Bay Street, San Francisco, CA",
+      "availableRooms": 2,
+      "price": 195
+    },
+    {
+      "id": "9",
+      "hotelName": "Pine Forest Lodge",
+      "address": "852 Evergreen Ln, Portland, OR",
+      "availableRooms": 9,
+      "price": 140
+    },
+    {
+      "id": "10",
+      "hotelName": "Grand Central Inn",
+      "address": "369 Central Ave, Atlanta, GA",
+      "availableRooms": 6,
+      "price": 160
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "role": "admin",
+      "active": true
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "role": "user",
+      "active": true
+    },
+    {
+      "id": "3",
+      "name": "Charlie Brown",
+      "email": "charlie.brown@example.com",
+      "role": "moderator",
+      "active": true
+    },
+    {
+      "id": "4",
+      "name": "Dana White",
+      "email": "dana.white@example.com",
+      "role": "editor",
+      "active": true
+    },
+    {
+      "id": "5",
+      "name": "Evan Lee",
+      "email": "evan.lee@example.com",
+      "role": "user",
+      "active": true
+    },
+    {
+      "id": "6",
+      "name": "Fiona Garcia",
+      "email": "fiona.garcia@example.com",
+      "role": "admin",
+      "active": false
+    },
+    {
+      "id": "7",
+      "name": "George Patel",
+      "email": "george.patel@example.com",
+      "role": "user",
+      "active": true
+    },
+    {
+      "id": "8",
+      "name": "Hannah Kim",
+      "email": "hannah.kim@example.com",
+      "role": "editor",
+      "active": true
+    },
+    {
+      "id": "9",
+      "name": "Isaac Turner",
+      "email": "isaac.turner@example.com",
+      "role": "moderator",
+      "active": false
+    },
+    {
+      "id": "10",
+      "name": "Jenna Lopez",
+      "email": "jenna.lopez@example.com",
+      "role": "user",
+      "active": true
+    }
+  ]
+}

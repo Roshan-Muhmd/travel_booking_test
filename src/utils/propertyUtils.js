@@ -15,17 +15,4 @@ export const handleToggleBlock = (block, setOpenBlocks) => {
     return temp;
   });
 
-  // Optional: perform actions based on block name
-  switch (block) {
-    case "flight":
-      console.log("Flight block toggled");
-      break;
-
-    case "hotel":
-      console.log("Hotel block toggled");
-      break;
-
-    default:
-      break;
-  }
 };

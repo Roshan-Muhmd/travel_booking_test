@@ -3,10 +3,10 @@ import HomePage from "./pages/HomePage"
 import store from "./redux/store"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Overview from "./pages/Overview";
-import Properties from "./pages/Properties";
-import Settings from "./pages/Settings";
 import Users from "./pages/Users";
 import NotFound from "./pages/NotFound";
+import Bookings from "./pages/Bookings";
+import Inventory from "./pages/Inventory";
 
 function App() {
 
@@ -22,11 +22,11 @@ function App() {
       {path: "dashboard",
         element : <Overview/>
       },
-      {path: "properties",
-        element : <Properties/>
+      {path: "bookings",
+        element : <Bookings/>
       },
-      {path: "settings",
-        element : <Settings/>
+      {path: "inventory",
+        element : <Inventory/>
       },
       {path: "users",
         element : <Users/>
