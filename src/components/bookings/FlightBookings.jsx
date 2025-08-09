@@ -1,30 +1,33 @@
 import React from 'react'
 import Card from '../ui/Card'
+import { format } from 'date-fns'
 
-const FlightBookings = () => {
+const FlightBookings = (props) => {
   return (
     <Card>
-      <img
-          src="https://via.placeholder.com/400x200"
-          alt="Hotel Image"
-          className="rounded-md mb-3 w-full h-48 object-cover"
-        />
-        <h2 className="text-xl font-semibold">Grand Palace Hotel</h2>
-        <p className="text-gray-600 text-sm">Mumbai, India</p>
+        <h2 className="text-xl font-semibold">{props?.bookings?.airline}</h2>
+        <p className="text-gray-600 text-sm">{props?.bookings?.from + " -----> " + props?.bookings?.to}</p>
         <div className="flex justify-between items-center mt-3">
           <div>
             <p className="text-sm text-gray-500">
-              Check-in:{" "}
-              <span className="font-medium text-gray-800">12 Aug 2025</span>
+              Booking Date:{" "}
+              <span className="font-medium text-gray-800">{props?.bookings?.bookingDate &&
+                            format(new Date(props.bookings.bookingDate), 'dd MMM yyyy, HH:mm')}</span>
             </p>
             <p className="text-sm text-gray-500">
-              Check-out:{" "}
-              <span className="font-medium text-gray-800">15 Aug 2025</span>
+              Departure:{" "}
+              <span className="font-medium text-gray-800">{props?.bookings?.departure &&
+                            format(new Date(props.bookings.departure), 'dd MMM yyyy, HH:mm')}</span>
+            </p>
+            <p className="text-sm text-gray-500">
+              Arrival:{" "}
+              <span className="font-medium text-gray-800">{props?.bookings?.arrival &&
+                            format(new Date(props.bookings.arrival), 'dd MMM yyyy, HH:mm')}</span>
             </p>
           </div>
-          <span className="text-lg font-bold text-green-600">₹4,500</span>
+          <span className="text-lg font-bold pl-10 text-green-600">${props?.bookings?.price}</span>
         </div>
-        <button className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+        <button className="mt-4 max-w-40 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
           View Details
         </button>
     </Card>

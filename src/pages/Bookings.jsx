@@ -9,17 +9,17 @@ import useGetBookings from "../hooks/useGetBookings";
 const Bookings = () => {
   const [openBlocks, setOpenBlocks] = useState([]);
 
-  const {bookingData} = useGetBookings()
+  const bookingData = useGetBookings()
   const flightBookings = bookingData?.flights
   const hotelBookings = bookingData?.hotels
-
+debugger
   return (
     <section className="w-4/5">
       <h2 className="text-xl font-bold">Bookings</h2>
       <ul >
         <Accordion
           Heading={<h2 class="text-lg font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
-              Flight Bookings
+              Flight Bookings <button className="min-w-8 bg-slate-700 p-2 rounded-sm">{openBlocks.includes("flight") ? "-" :"+"}</button>
             </h2>}
           collapseStatus={openBlocks.includes("flight")}
           handleCollapse={() => handleToggleBlock("flight", setOpenBlocks)}
@@ -33,11 +33,10 @@ const Bookings = () => {
           :
           <Card>...Loading</Card>
           }
-         <FlightBookings/>
         </Accordion>
         <Accordion
           Heading={<h2 class="text-lg font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
-              Hotels Bookings
+              Hotels Bookings <button className="min-w-8 bg-slate-700 p-2 rounded-sm">{openBlocks.includes("hotel") ? "-" :"+"}</button>
             </h2>}
           collapseStatus={openBlocks.includes("hotel")}
           handleCollapse={() => handleToggleBlock("hotel", setOpenBlocks)}

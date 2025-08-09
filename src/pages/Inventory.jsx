@@ -22,9 +22,12 @@ const Inventory = () => {
         <li>
           <Accordion
             Heading={
+              <>
               <h2 className="text-lg font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
-                Available Flights
+                Available Flights <button className="min-w-8 bg-slate-700 p-2 rounded-sm">{openBlocks.includes("flight") ? "-" :"+"}</button>
               </h2>
+              
+              </>
             }
             collapseStatus={openBlocks.includes("flight")}
             handleCollapse={() => handleToggleBlock("flight", setOpenBlocks)}
@@ -52,7 +55,7 @@ const Inventory = () => {
           <Accordion
             Heading={
               <h2 class="text-lg font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
-                Available Hotels
+                Available Hotels <button className="min-w-8 bg-slate-700 p-2 rounded-sm">{openBlocks.includes("hotel") ? "-" :"+"}</button>
               </h2>
             }
             collapseStatus={openBlocks.includes("hotel")}

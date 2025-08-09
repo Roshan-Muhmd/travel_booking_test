@@ -143,6 +143,15 @@
       "departure": "2025-08-26T07:00",
       "arrival": "2025-09-03T05:59",
       "price": 470
+    },
+    {
+      "id": "8193",
+      "airline": "latest test ",
+      "from": "QWE",
+      "to": "AFT",
+      "departure": "2025-08-20T11:37",
+      "arrival": "2025-08-26T12:34",
+      "price": 190
     }
   ],
   "hotels": [
@@ -296,7 +305,13 @@
       "flightId": "3",
       "bookingDate": "2025-08-05T10:15:00Z",
       "seatClass": "Economy",
-      "status": "confirmed"
+      "status": "confirmed",
+      "airline": "AeroLine",
+      "from": "ATL",
+      "to": "DFW",
+      "departure": "2025-08-12T08:15:00Z",
+      "arrival": "2025-08-12T10:45:00Z",
+      "price": 120
     },
     {
       "id": "2",
@@ -304,7 +319,13 @@
       "flightId": "7",
       "bookingDate": "2025-08-06T14:45:00Z",
       "seatClass": "Business",
-      "status": "pending"
+      "status": "pending",
+      "airline": "CloudJet",
+      "from": "MSP",
+      "to": "DTW",
+      "departure": "2025-08-16T10:00:00Z",
+      "arrival": "2025-08-16T12:00:00Z",
+      "price": 105
     },
     {
       "id": "3",
@@ -312,7 +333,13 @@
       "flightId": "1",
       "bookingDate": "2025-08-07T08:30:00Z",
       "seatClass": "First",
-      "status": "cancelled"
+      "status": "cancelled",
+      "airline": "SkyAir",
+      "from": "JFK",
+      "to": "LAX",
+      "departure": "2025-08-10T09:00:00Z",
+      "arrival": "2025-08-10T12:00:00Z",
+      "price": 250
     }
   ],
   "hotelBookings": [
@@ -323,7 +350,11 @@
       "checkIn": "2025-08-20",
       "checkOut": "2025-08-23",
       "rooms": 1,
-      "status": "confirmed"
+      "status": "confirmed",
+      "hotelName": "Skyline Suites",
+      "address": "987 Skyscraper Ln, Chicago, IL",
+      "availableRooms": 4,
+      "price": 200
     },
     {
       "id": "2",
@@ -332,7 +363,11 @@
       "checkIn": "2025-08-15",
       "checkOut": "2025-08-18",
       "rooms": 2,
-      "status": "pending"
+      "status": "pending",
+      "hotelName": "Mountain View Lodge",
+      "address": "456 Alpine Road, Denver, CO",
+      "availableRooms": 8,
+      "price": 120
     },
     {
       "id": "3",
@@ -341,7 +376,11 @@
       "checkIn": "2025-08-25",
       "checkOut": "2025-08-27",
       "rooms": 1,
-      "status": "cancelled"
+      "status": "cancelled",
+      "hotelName": "Harbor View Hotel",
+      "address": "753 Bay Street, San Francisco, CA",
+      "availableRooms": 2,
+      "price": 195
     }
   ]
 }

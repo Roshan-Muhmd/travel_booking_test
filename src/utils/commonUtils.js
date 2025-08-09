@@ -15,3 +15,12 @@ export const addData = async(data,module) => {
   }
   return false
 }
+
+export const assembleCommonData = (data) => {
+  debugger
+  const totalBookings  = {flight: data?.flightBookings?.length || 0, hotel: data?.hotelBookings?.length || 0}
+  const revenue = data?.flightBookings?.concat(data?.hotelBookings).reduce((acc,item)=>{
+    return acc += item?.price ?? 0
+  },0)
+  return {users:data?.users?.length ?? 0,revenue,bookings:totalBookings}
+}

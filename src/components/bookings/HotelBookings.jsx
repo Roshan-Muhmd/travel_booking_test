@@ -1,17 +1,18 @@
 import React from "react";
 import Card from "../ui/Card";
 
-const HotelBookings = () => {
+const HotelBookings = (props) => {
+  debugger
   return (
     <Card>
    
         <img
-          src="https://via.placeholder.com/400x200"
+          src={`https://picsum.photos/id/${1 + (props?.bookings?.id || 0)}/100/100`}
           alt="Hotel Image"
-          className="rounded-md mb-3 w-full h-48 object-cover"
+          className="rounded-md mb-3 max-w-lg h-48 object-cover"
         />
-        <h2 className="text-xl font-semibold">Grand Palace Hotel</h2>
-        <p className="text-gray-600 text-sm">Mumbai, India</p>
+        <h2 className="text-xl font-semibold">{props?.bookings?.hotelName}</h2>
+        <p className="text-gray-600 text-sm">{props?.bookings?.address}</p>
         <div className="flex justify-between items-center mt-3">
           <div>
             <p className="text-sm text-gray-500">
@@ -23,9 +24,9 @@ const HotelBookings = () => {
               <span className="font-medium text-gray-800">15 Aug 2025</span>
             </p>
           </div>
-          <span className="text-lg font-bold text-green-600">₹4,500</span>
+          <span className="text-lg font-bold ml-5 text-green-600">${props?.bookings?.price}</span>
         </div>
-        <button className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+        <button className="mt-4 max-w-40 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
           View Details
         </button>
       
