@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 const Inventory = () => {
   const [openBlocks, setOpenBlocks] = useState([]);
 
-  const { flights, hotels, } = useGetInventory();
+  const { processedFlights, hotels, } = useGetInventory();
   
 
   return (
@@ -34,8 +34,8 @@ const Inventory = () => {
               <FilterAndSort/>
             </div>
 
-            {flights?.length ? (
-              flights?.map((flight, index) => {
+            {processedFlights?.length ? (
+              processedFlights?.map((flight, index) => {
                 return (
                   <FlightProperty
                     key={"flight_property_" + index}
