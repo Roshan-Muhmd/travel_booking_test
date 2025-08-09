@@ -16,6 +16,15 @@ export const addData = async(data,module) => {
   return false
 }
 
+export const deleteData = async(id,module) => {
+  const deleteDataRes = await axiosInstance.delete(`${import.meta.env.VITE_API_URL}${module}/${id}`)
+debugger
+  if(deleteDataRes?.data){
+    return deleteDataRes?.data
+  }
+  return false
+}
+
 export const assembleCommonData = (data) => {
   debugger
   const totalBookings  = {flight: data?.flightBookings?.length || 0, hotel: data?.hotelBookings?.length || 0}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Card from '../ui/Card'
 import { format } from 'date-fns'
 
@@ -36,9 +36,10 @@ const FlightProperty = (props) => {
         <span className="text-xl font-bold text-blue-600">
           ${props?.flight?.price}
         </span>
+        <button onClick={() => { props?.deleteInventory(props?.flight?.id, "flights") }} className='bg-red-500 rounded-sm p-2 m-5'>Delete</button>
       </div>
     </Card>
   )
 }
 
-export default FlightProperty
+export default memo(FlightProperty)

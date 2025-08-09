@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Card from '../ui/Card'
 
 const HotelProperty = (props) => {
@@ -39,4 +39,4 @@ const HotelProperty = (props) => {
   )
 }
 
-export default HotelProperty
+export default memo(HotelProperty)

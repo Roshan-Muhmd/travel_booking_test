@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { addData } from '../../utils/commonUtils'
 
-const AddnewFlightForm = () => {
+const AddnewFlightForm = ({updateInventory}) => {
   const formRef = useRef(null)
   const [showForm, setShowForm] = useState(false)
 
@@ -20,6 +20,7 @@ const AddnewFlightForm = () => {
       const response = await addData(data,"flights")
       // Clear the form after submit
       if(response?.id){
+        updateInventory(response,"flights")
         alert("Succesfully Added")
          formRef.current.reset()
       }else{
