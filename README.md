@@ -30,7 +30,7 @@ npm install
 npm run dev
 
 # Run Json-server
-json-server --watch db.json --port 5000 (change port in .env)
+json-server --watch db.json --port 3001 (change port in .env)
 
 
 
