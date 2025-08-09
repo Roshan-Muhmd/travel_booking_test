@@ -9,7 +9,7 @@ A simple React application that fetches property data (flights, hotels, etc.) fr
 - **JSON Server** for mock API
 - **Lazy Loading** for pages/components
 - **Memoized Components** to prevent unnecessary re-renders
-
+---
 ##Pages
 
 - ** Overview - Revenue, User count, Total Booking
