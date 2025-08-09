@@ -7,14 +7,14 @@ const useUserList = () => {
 
 /* const [userList, setUserList] = useState([]) */
 const userList = useSelector((state)=>state?.common?.users)
-debugger
+
 const dispatch = useDispatch()
 
 useEffect(() => {
   
 (async ()=>{
 
-  debugger
+  
   if(!userList){
     const userListres = await axiosInstance.get("/users")
     /* setUserList(userListres?.data ?? []) */

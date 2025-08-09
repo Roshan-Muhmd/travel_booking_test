@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../ui/Card";
 
 const HotelBookings = (props) => {
-  debugger
+  
   return (
     <Card>
    

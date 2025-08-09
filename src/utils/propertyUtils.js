@@ -18,12 +18,12 @@ export const handleToggleBlock = (block, setOpenBlocks) => {
 };
 
 export const handleFilter = (item,filter)=>{
-  debugger
+  
  return  filter?.airline === null || item?.airline === filter?.airline
 }
 
 export const handleSort = (a,b,sort)=>{
-  debugger
+  
  const sortType = sort?.type
  switch (sortType) {
   case "price":

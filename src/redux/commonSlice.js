@@ -11,7 +11,7 @@ const commonSlice = createSlice({
     },
     reducers: {
         setCommonData : (state,action) => {
-            debugger
+            
             return {...state,...action.payload}
         }
     }

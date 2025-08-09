@@ -10,7 +10,7 @@ export const fetchProperties = createAsyncThunk(
           axiosInstance.get("/flights"),
           axiosInstance.get("/hotels"),
         ]);
-        debugger
+        
 
     return { flights: flightsRes?.data, hotels: hotelsRes?.data };
   }
@@ -34,11 +34,11 @@ const propertySlice = createSlice({
   },
   reducers: {
     setProperties: (state, action) => {
-      debugger
+      
       return {...state,...action?.payload}
     },
     updateFilter: (state, action)=> {
-    debugger
+    
       state.filter[action.payload.type] = action.payload.value
   },
   updateSort: (state, action) => {
@@ -52,7 +52,7 @@ const propertySlice = createSlice({
         state.status = "loading";
       })
       .addCase(fetchProperties.fulfilled, (state, action) => {
-        debugger
+        
         state.status = "succeeded";
         state.flights = action.payload.flights || [];
         state.processedFlights = action.payload.flights || [];

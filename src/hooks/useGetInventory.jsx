@@ -17,7 +17,7 @@ const useGetInventory = () => {
   }, []);
 
   useEffect(() => {
-  debugger
+  
     if(inventoryData?.flights?.length > 0 || filter?.airline !== null){
       const flights = inventoryData?.flights.filter((item)=>handleFilter(item,filter)).sort((a,b)=>handleSort(a,b,sort))
       dispatch(setProperties({processedFlights:flights}))
@@ -26,7 +26,7 @@ const useGetInventory = () => {
   }, [sort,filter,inventoryData?.flights,])
 
   const updateInventory = (data,property) =>{
-debugger
+
     const temp = [...inventoryData[property]]
     const itemindex =  temp.findIndex((item)=> item?.id === data?.id)
         if(itemindex >= 0){
@@ -39,7 +39,7 @@ debugger
   }
 
   const deleteInventory = async(id,module) => {
-    debugger
+    
     const deleteRes = await deleteData(id,module)
 
     if(deleteRes){

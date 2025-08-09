@@ -8,7 +8,7 @@ export const axiosInstance = axios.create({
 })
 
 export const addData = async(data,module) => {
-  const addDataRes = await axiosInstance.post(`${import.meta.env.VITE_API_URL}${module}`,data)
+  const addDataRes = await axiosInstance.post(`${module}`,data)
 
   if(addDataRes?.data){
     return addDataRes?.data
@@ -17,8 +17,8 @@ export const addData = async(data,module) => {
 }
 
 export const deleteData = async(id,module) => {
-  const deleteDataRes = await axiosInstance.delete(`${import.meta.env.VITE_API_URL}${module}/${id}`)
-debugger
+  const deleteDataRes = await axiosInstance.delete(`${module}/${id}`)
+
   if(deleteDataRes?.data){
     return deleteDataRes?.data
   }
@@ -26,7 +26,7 @@ debugger
 }
 
 export const assembleCommonData = (data) => {
-  debugger
+  
   const totalBookings  = {flight: data?.flightBookings?.length || 0, hotel: data?.hotelBookings?.length || 0}
   const revenue = data?.flightBookings?.concat(data?.hotelBookings).reduce((acc,item)=>{
     return acc += item?.price ?? 0

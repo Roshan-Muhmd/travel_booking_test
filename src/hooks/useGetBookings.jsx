@@ -8,11 +8,11 @@ const useGetBookings = () => {
    /*  const [bookingData, setBookingData] = useState(null) */
     const commonData = useSelector((state)=>state?.common)
     const dispatch = useDispatch()
-debugger
+
 useEffect(() => {
     
 (async () => {
-      debugger
+      
   if(commonData?.hotelBookings?.length === 0 && commonData?.flightBookings?.length === 0){
     try {
         const [flightsBookingRes, hotelsBookingRes] = await Promise.all([
