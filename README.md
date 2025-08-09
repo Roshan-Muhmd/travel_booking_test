@@ -10,6 +10,14 @@ A simple React application that fetches property data (flights, hotels, etc.) fr
 - **Lazy Loading** for pages/components
 - **Memoized Components** to prevent unnecessary re-renders
 
+##Pages
+
+- ** Overview - Revenue, User count, Total Booking
+- ** Users - List current users, Change user active status
+- ** Bookings - List Bookings
+- ** Inventory - List available flight hotel inventory, Add/Delete  inventory items
+- ** Logout   
+
 ---
 
 ## Prerequisites
