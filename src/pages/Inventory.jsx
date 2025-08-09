@@ -15,12 +15,12 @@ const Inventory = () => {
 
   return (
     <section className="w-4/5">
-      <h2 className="text-xl font-bold">Inventory Items</h2>
+      <h2 className="text-2xl font-bold p-10">Inventory Items</h2>
       <ul>
         <li>
           <Accordion
             Heading={
-              <h2 className="text-lg font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
+              <h2 className="text-lg pl-5 font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
                 Available Flights{" "}
                 <button className="min-w-8 bg-slate-700 p-2 rounded-sm">
                   {openBlocks.includes("flight") ? "-" : "+"}
@@ -52,7 +52,7 @@ const Inventory = () => {
         <li>
           <Accordion
             Heading={
-              <h2 className="text-lg font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
+              <h2 className="text-lg pl-5 font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
                 Available Hotels{" "}
                 <button className="min-w-8 bg-slate-700 p-2 rounded-sm">
                   {openBlocks.includes("hotel") ? "-" : "+"}

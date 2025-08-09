@@ -15,11 +15,11 @@ const Bookings = () => {
 
   return (
     <section className="w-4/5">
-      <h2 className="text-xl font-bold">Bookings</h2>
+      <h2 className="text-2xl font-bold p-10">Bookings</h2>
       <ul>
         <Accordion
           Heading={
-            <h2 className="text-lg font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
+            <h2 className="text-lg p-4 font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
               Flight Bookings{" "}
               <button className="min-w-8 bg-slate-700 p-2 rounded-sm">
                 {openBlocks.includes("flight") ? "-" : "+"}
@@ -42,7 +42,7 @@ const Bookings = () => {
         </Accordion>
         <Accordion
           Heading={
-            <h2 className="text-lg font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
+            <h2 className="text-lg p-4 font-semibold text-gray-800 mb-6 border-b-2 border-gray-200 pb-2">
               Hotels Bookings{" "}
               <button className="min-w-8 bg-slate-700 p-2 rounded-sm">
                 {openBlocks.includes("hotel") ? "-" : "+"}
